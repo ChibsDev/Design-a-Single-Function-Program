@@ -64,6 +64,6 @@ Given an empty string, the function returns True
 
 """
 Given a None value
-It throws an error
+It throws an exception
 """
-grammar_checker(None) throws an error
+grammar_checker(None) throws an exception

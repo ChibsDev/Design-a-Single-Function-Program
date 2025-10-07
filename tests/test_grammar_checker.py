@@ -27,6 +27,13 @@ def test_grammar_checker_raises_on_none():
     error_message = str(e.value)
     assert error_message == "Please provide text and I will check your grammar"
 
+def test_grammar_checker_raises_on_non_string():
+    with pytest.raises(Exception) as e:
+        grammar_checker(123)
+    error_message = str(e.value)
+    assert error_message == "Input must be a string. Please provide text."
+
+
 def test_returns_false_for_empty_string():
     assert grammar_checker("") == False
 
